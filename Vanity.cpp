@@ -1741,7 +1741,7 @@ void VanitySearch::Search(int nbThread,std::vector<int> gpuId,std::vector<int> g
     avgGpuKeyRate /= (double)(nbSample);
 
     if (isAlive(params)) {
-      printf("%.3f MK/s (GPU %.3f MK/s) (2^%.2f) %s[%d]  \r",
+      printf("[%.3f Mkey/s] [GPU %.3f Mkey/s] [2^%.2f] %s[%d]  \r",
         avgKeyRate / 1000000.0, avgGpuKeyRate / 1000000.0,
           log2((double)count), GetExpectedTime(avgKeyRate, (double)count).c_str(),nbFoundKey);
     }
